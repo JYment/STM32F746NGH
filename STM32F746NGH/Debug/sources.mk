@@ -25,6 +25,7 @@ SUBDIRS := \
 Src/ap \
 Src/bsp \
 Src/bsp/startup \
+Src/common/core \
 Src/hw/driver \
 Src/hw \
 Src/lib/STM32F746NGH/Drivers/STM32F7xx_HAL_Driver/Src \

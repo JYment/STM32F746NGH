@@ -12,5 +12,7 @@
 #include "ap.h"
 
 
+extern void Error_Handler(void);
+
 
 #endif /* MAIN_H_ */

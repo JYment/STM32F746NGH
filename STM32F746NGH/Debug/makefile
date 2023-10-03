@@ -16,6 +16,7 @@ RM := rm -rf
 -include Src/lib/STM32F746NGH/Drivers/STM32F7xx_HAL_Driver/Src/subdir.mk
 -include Src/hw/driver/subdir.mk
 -include Src/hw/subdir.mk
+-include Src/common/core/subdir.mk
 -include Src/bsp/startup/subdir.mk
 -include Src/bsp/subdir.mk
 -include Src/ap/subdir.mk

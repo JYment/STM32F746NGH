@@ -12,7 +12,7 @@
 #include "def.h"
 
 #include "stm32f7xx_hal.h"
-#include "usb_device.h"
+
 
 
 void bspInit(void);

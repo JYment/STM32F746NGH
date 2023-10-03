@@ -30,7 +30,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include "main.h"
 #include "stm32f7xx.h"
 #include "stm32f7xx_hal.h"
 

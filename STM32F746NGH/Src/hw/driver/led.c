@@ -7,7 +7,7 @@
 
 
 #include "led.h"
-//#include "cli.h"
+#include "cli.h"
 
 
 typedef struct
@@ -25,7 +25,8 @@ static void cliLed(cli_args_t *args);
 
 led_tbl_t led_tbl[LED_MAX_CH] =
 	{
-		{GPIOI, GPIO_PIN_1, GPIO_PIN_RESET, GPIO_PIN_SET}
+		{GPIOI, GPIO_PIN_1, GPIO_PIN_RESET, GPIO_PIN_SET},
+		{GPIOK, GPIO_PIN_3, GPIO_PIN_RESET, GPIO_PIN_SET},
 	};
 
 
@@ -34,7 +35,6 @@ bool ledInit(void)
 	bool ret = true;
 	GPIO_InitTypeDef GPIO_InitStruct = {0};
 
-	/*Configure GPIO pins : PB4 PB5 */
 	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

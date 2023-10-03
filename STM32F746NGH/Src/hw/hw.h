@@ -12,8 +12,9 @@
 #include "hw_def.h"
 
 #include "led.h"
+#include "cli.h"
 #include "uart.h"
-
+#include "flash.h"
 
 
 
