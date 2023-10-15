@@ -19,4 +19,5 @@ void hwInit(void)
   cliInit();
   uartInit();
   flashInit();
+  i2cInit();
 }

@@ -5,12 +5,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Src/common/core/ft5336.c \
 ../Src/common/core/qbuffer.c 
 
 OBJS += \
+./Src/common/core/ft5336.o \
 ./Src/common/core/qbuffer.o 
 
 C_DEPS += \
+./Src/common/core/ft5336.d \
 ./Src/common/core/qbuffer.d 
 
 
@@ -21,7 +24,7 @@ Src/common/core/%.o Src/common/core/%.su Src/common/core/%.cyclo: ../Src/common/
 clean: clean-Src-2f-common-2f-core
 
 clean-Src-2f-common-2f-core:
-	-$(RM) ./Src/common/core/qbuffer.cyclo ./Src/common/core/qbuffer.d ./Src/common/core/qbuffer.o ./Src/common/core/qbuffer.su
+	-$(RM) ./Src/common/core/ft5336.cyclo ./Src/common/core/ft5336.d ./Src/common/core/ft5336.o ./Src/common/core/ft5336.su ./Src/common/core/qbuffer.cyclo ./Src/common/core/qbuffer.d ./Src/common/core/qbuffer.o ./Src/common/core/qbuffer.su
 
 .PHONY: clean-Src-2f-common-2f-core
 

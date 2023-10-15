@@ -10,6 +10,7 @@
 
 
 void MPU_Config(void);
+void CPU_CACHE_Enable(void);
 void SystemClock_Config(void);
 
 
@@ -17,8 +18,9 @@ void SystemClock_Config(void);
 
 void bspInit(void)
 {
-  HAL_Init();
   MPU_Config();
+  HAL_Init();
+//  CPU_CACHE_Enable();
   SystemClock_Config();
 
   __HAL_RCC_GPIOA_CLK_ENABLE();
@@ -119,6 +121,15 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+void CPU_CACHE_Enable(void)
+{
+  /* Enable I-Cache */
+  SCB_EnableICache();
+
+  /* Enable D-Cache */
+  SCB_EnableDCache();
+}
+
 
 /* USER CODE END 4 */
 

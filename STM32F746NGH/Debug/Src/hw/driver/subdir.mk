@@ -7,19 +7,25 @@
 C_SRCS += \
 ../Src/hw/driver/cli.c \
 ../Src/hw/driver/flash.c \
+../Src/hw/driver/i2c.c \
 ../Src/hw/driver/led.c \
+../Src/hw/driver/touch.c \
 ../Src/hw/driver/uart.c 
 
 OBJS += \
 ./Src/hw/driver/cli.o \
 ./Src/hw/driver/flash.o \
+./Src/hw/driver/i2c.o \
 ./Src/hw/driver/led.o \
+./Src/hw/driver/touch.o \
 ./Src/hw/driver/uart.o 
 
 C_DEPS += \
 ./Src/hw/driver/cli.d \
 ./Src/hw/driver/flash.d \
+./Src/hw/driver/i2c.d \
 ./Src/hw/driver/led.d \
+./Src/hw/driver/touch.d \
 ./Src/hw/driver/uart.d 
 
 
@@ -30,7 +36,7 @@ Src/hw/driver/%.o Src/hw/driver/%.su Src/hw/driver/%.cyclo: ../Src/hw/driver/%.c
 clean: clean-Src-2f-hw-2f-driver
 
 clean-Src-2f-hw-2f-driver:
-	-$(RM) ./Src/hw/driver/cli.cyclo ./Src/hw/driver/cli.d ./Src/hw/driver/cli.o ./Src/hw/driver/cli.su ./Src/hw/driver/flash.cyclo ./Src/hw/driver/flash.d ./Src/hw/driver/flash.o ./Src/hw/driver/flash.su ./Src/hw/driver/led.cyclo ./Src/hw/driver/led.d ./Src/hw/driver/led.o ./Src/hw/driver/led.su ./Src/hw/driver/uart.cyclo ./Src/hw/driver/uart.d ./Src/hw/driver/uart.o ./Src/hw/driver/uart.su
+	-$(RM) ./Src/hw/driver/cli.cyclo ./Src/hw/driver/cli.d ./Src/hw/driver/cli.o ./Src/hw/driver/cli.su ./Src/hw/driver/flash.cyclo ./Src/hw/driver/flash.d ./Src/hw/driver/flash.o ./Src/hw/driver/flash.su ./Src/hw/driver/i2c.cyclo ./Src/hw/driver/i2c.d ./Src/hw/driver/i2c.o ./Src/hw/driver/i2c.su ./Src/hw/driver/led.cyclo ./Src/hw/driver/led.d ./Src/hw/driver/led.o ./Src/hw/driver/led.su ./Src/hw/driver/touch.cyclo ./Src/hw/driver/touch.d ./Src/hw/driver/touch.o ./Src/hw/driver/touch.su ./Src/hw/driver/uart.cyclo ./Src/hw/driver/uart.d ./Src/hw/driver/uart.o ./Src/hw/driver/uart.su
 
 .PHONY: clean-Src-2f-hw-2f-driver
 

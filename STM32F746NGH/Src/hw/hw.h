@@ -15,6 +15,8 @@
 #include "cli.h"
 #include "uart.h"
 #include "flash.h"
+#include "i2c.h"
+#include "touch.h"
 
 
 

@@ -13,6 +13,7 @@
 void apInit(void)
 {
   cliOpen(_DEF_UART1, 9600);    //USB
+  i2cOpen(_DEF_I2C1, I2C_FREQ_100KHz);
 }
 
 void apMain(void)
@@ -26,63 +27,9 @@ void apMain(void)
     {
       pre_time = millis();
       ledToggle(_DEF_LED1);
-      ledToggle(_DEF_BACKLIGHT);
+//      ledToggle(_DEF_BACKLIGHT);
     }
 
-    if(cliAvailable() > 0)
-    {
-      uint8_t rx_data;
-      rx_data = cliRead();
-
-      if(rx_data == '1')
-      {
-        uint8_t buf[32];
-
-        cliPrintf("Read...\n");
-
-        flashRead(0x8000000 + (60 * 1024), buf, 32);
-
-        for(int i=0; i<32; i++)
-        {
-          cliPrintf("0x%X : 0x%X\n", 0x8000000 + (60 * 1024) + i, buf[i]);
-        }
-      }
-
-      if(rx_data == '2')
-      {
-        cliPrintf("Erase...\n");
-
-        if(flashErase(0x8000000 + (60 * 1024), 32) == true)
-        {
-          cliPrintf("Erase OK\n");
-        }
-        else
-        {
-          cliPrintf("Erase Failed\n");
-        }
-      }
-
-      if(rx_data == '3')
-      {
-        uint8_t buf[32];
-
-        for(int i=0; i<32; i++)
-        {
-          buf[i] = i;
-        }
-
-        cliPrintf("Write...\n");
-        if(flashWrite(0x8000000 + (60 * 1024), buf, 32) == true)
-        {
-          cliPrintf("Write OK\n");
-        }
-        else
-        {
-          cliPrintf("Write Failed\n");
-        }
-      }
-    }
-
-//    cliMain();
+    cliMain();
   }
 }
